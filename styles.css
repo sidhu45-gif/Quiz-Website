@@ -1,149 +1,156 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #008080, #20b2aa);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #008080, #20b2aa);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.12);
-  padding: 40px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 500px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  animation: fadeIn 1s ease;
-  position: relative;
-  z-index: 2;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 1s ease;
+    position: relative;
+    z-index: 2;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .title {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  animation: glow 2s infinite alternate;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    animation: glow 2s infinite alternate;
 }
 
 @keyframes glow {
-  from { text-shadow: 0 0 10px #00ffff; }
-  to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc; }
+    from { text-shadow: 0 0 10px #00ffff; }
+    to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc; }
 }
 
 .subtitle {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  opacity: 0.9;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
 }
 
 #player-name {
-  width: 80%;
-  padding: 12px;
-  margin: 15px 0;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  text-align: center;
-  outline: none;
-  background: rgba(255, 255, 255, 0.9);
-  color: #008080;
+    width: 80%;
+    padding: 12px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #008080;
 }
 
 .difficulty {
-  margin: 15px 0;
+    margin: 15px 0;
 }
 
 .difficulty label {
-  margin: 0 10px;
-  font-weight: bold;
+    margin: 0 10px;
+    font-weight: bold;
 }
 
 button {
-  margin: 10px;
-  padding: 12px 25px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: 0.3s;
-  background: #fff;
-  color: #008080;
+    margin: 10px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #fff;
+    color: #008080;
 }
 
 button:hover {
-  background: #20b2aa;
-  color: #fff;
-  transform: scale(1.05);
+    background: #20b2aa;
+    color: #fff;
+    transform: scale(1.05);
 }
 
 .screen { display: none; }
 .screen.active { display: block; }
 
 .btn-grid {
-  display: grid;
-  gap: 10px;
-  margin: 20px 0;
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
 }
 
 .btn {
-  padding: 10px;
-  border-radius: 10px;
-  background: #fff;
-  color: #008080;
-  cursor: pointer;
-  transition: 0.3s;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    color: #008080;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn:hover {
-  background: #20b2aa;
-  color: #fff;
+    background: #20b2aa;
+    color: #fff;
 }
 
 #leaderboard {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
 }
 
 #leaderboard li {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px;
-  border-radius: 10px;
-  margin: 5px 0;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+/* New CSS to highlight the selected button */
+.btn.selected {
+    background: #20b2aa;
+    color: #fff;
+    border: 2px solid #fff;
 }
 
 /* Background Animation */
 body::before, body::after {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
-  z-index: 1;
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    z-index: 1;
 }
 
 body::after {
-  width: 200px;
-  height: 200px;
-  right: 10%;
-  bottom: 10%;
-  animation-delay: 3s;
+    width: 200px;
+    height: 200px;
+    right: 10%;
+    bottom: 10%;
+    animation-delay: 3s;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) translateX(0); }
-  50% { transform: translateY(-20px) translateX(20px); }
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(20px); }
 }
