@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen active">
+      <h1 class="title">✨ Welcome to the Quiz ✨</h1>
+      <p class="subtitle">Test your knowledge and climb the leaderboard!</p>
+
+      <!-- Player Name -->
+      <input type="text" id="player-name" placeholder="Enter your name" />
+
+      <!-- Difficulty -->
+      <div class="difficulty">
+        <label><input type="radio" name="level" value="easy" checked> Easy</label>
+        <label><input type="radio" name="level" value="medium"> Medium</label>
+        <label><input type="radio" name="level" value="hard"> Hard</label>
+      </div>
+
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen">
+      <h2 id="question">Question Text</h2>
+      <div id="answer-buttons" class="btn-grid"></div>
+      <button id="next-btn" class="hide">Next</button>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="screen">
+      <h2>🎉 Quiz Completed!</h2>
+      <p id="score-text"></p>
+      <h3>🏆 Leaderboard</h3>
+      <ul id="leaderboard"></ul>
+      <button id="restart-btn">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
